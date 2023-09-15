@@ -71,7 +71,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
             Are you sure, you want to delete this task?
           </h3>
           <div className='modal-action'>
-            <button onClick={() => handleDeleteTask(task.id)} className='btn'>
+            <button onClick={() => handleDeleteTask(task.id)} className='btn btn-yes'>
               Yes
             </button>
           </div>

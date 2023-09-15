@@ -1,0 +1,169 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.add-task-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+
+    .add-task-button {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        
+        .add-task-icon {
+            margin-left: 10px;
+        }
+    }
+}
+
+.modal {
+    &-open {
+        display: block;
+    }
+
+    &-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .close-modal-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+}
+
+.modal-action {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .input {
+        &-bordered {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1;
+        }
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .submit-button {
+        @extend .btn;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+    max-width: 60%; // Đặt chiều rộng tùy ý
+    margin: auto; // Để căn giữa màn hình
+
+    th,
+    td {
+        padding: 0.625rem;
+        border: 1px solid #ccc;
+        text-align: center; // Để căn giữa nội dung của các ô
+    }
+
+    th {
+        background-color: #f9f9f9;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        }
+    }
+}
+
+th:nth-child(1) {
+    width: 90%; // Đặt chiều rộng của cột "Tasks"
+}
+
+th:nth-child(2) {
+    width: 10%; // Đặt chiều rộng của cột "Actions"
+}
+
+td:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text-red-500 {
+        color: #ef4444;
+        margin-right: 0.5rem; // Khoảng cách giữa biểu tượng "Delete" và "Edit"
+    }
+
+    .text-blue-500 {
+        color: #3b82f6;
+        margin-left: 0.5rem; // Khoảng cách giữa biểu tượng "Edit" và "Delete"
+    }
+}
+
+.text-center {
+    text-align: center; // Để căn giữa nội dung của tiêu đề "Todo List App"
+    margin-bottom: 5rem;
+}
+
+.btn-yes {
+    margin-left: auto; // Để đẩy nút "Yes" về bên phải
+}
+
+.modal-box {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); // Thêm hiệu ứng shadow cho cửa sổ modal
+}
+
+.max-w-4xl {
+    max-width: 256rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
